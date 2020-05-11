@@ -1,0 +1,7 @@
+{
+    "url": "https://myWebsite.com",
+    "user": {
+        "username": "myUser",
+        "password": "superSecurePassword123"
+    }
+}
