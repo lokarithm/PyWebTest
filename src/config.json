@@ -1,7 +1,8 @@
-{
+[{
     "url": "https://myWebsite.com",
     "user": {
         "username": "myUser",
         "password": "superSecurePassword123"
-    }
-}
+    },
+    "test_case": "test_case01.csv"
+}]

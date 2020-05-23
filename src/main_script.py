@@ -8,9 +8,10 @@ from managers.test_manager import TestManager
 def main():
     # Initialize configuration
     configurationManager = ConfigurationManager()
-    configuration = configurationManager.initialize()
+    configurations = configurationManager.initialize()
     driver = Driver()
-    testManager = TestManager(driver)
+    testManager = TestManager(driver, configurations)
+    testManager.run_test()
 
 
 if __name__ == "__main__":

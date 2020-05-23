@@ -18,5 +18,9 @@ from helpers.alert_helper import AlertHelper
 
 
 class TestManager:
-    def __init__(self, driver):
+    def __init__(self, driver, configurations):
         self.driver = driver
+        self.configurations = configurations
+
+    def run_test(self):
+        print("Put run test logics here")

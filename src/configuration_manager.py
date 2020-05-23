@@ -12,14 +12,21 @@ class ConfigurationManager:
     def initialize(self):
         try:
             with open(self.fileName, 'r') as json_file:
-                data = json.load(json_file)
-                url = data['url']
-                user = User(data['user']['username'], data['user']['password'])
+                json_array = json.load(json_file)
+                configurations = []
 
-                configuration = Configuration(url)
-                configuration.user = user
+                for item in json_array:
+                    url = item['url']
+                    user = User(item['user']['username'],
+                                item['user']['password'])
+                    testCase = item['test_case']
 
-                return configuration
+                    configuration = Configuration(url)
+                    configuration.user = user
+                    configuration.testCase = testCase
+
+                    configurations.append(configuration)
+                return configurations
         except FileNotFoundError:
             print(
                 f'ConfigurationManager - Error: file {self.fileName} is not found!')
