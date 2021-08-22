@@ -32,6 +32,7 @@ class Driver:
         chrome_options.add_argument('--no-sandbox')
         chrome_options.add_argument('--disable-dev-shm-usage')
         chrome_options.add_argument('window-size='+self.window_size)
+        chrome_options.add_experimental_option("detach", True)
 
         if self.is_headless:
             chrome_options.add_argument('--headless')

@@ -6,7 +6,7 @@ try:
     # this module only works in Windows
     import winsound
 except ImportError:
-    print("Not windows sytem")
+    print("Running in non windows sytem")
 
 
 class AlertHelper:

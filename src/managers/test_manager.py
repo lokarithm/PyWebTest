@@ -15,12 +15,13 @@ from selenium.webdriver.support.ui import WebDriverWait
 from helpers.dom_type import DomType
 from helpers.dom_helper import DomHelper
 from helpers.alert_helper import AlertHelper
-
+from models.configuration import Configuration
 
 class TestManager:
-    def __init__(self, driver, configurations):
-        self.driver = driver
+    def __init__(self, driver, configurations: Configuration):
+        self.driver = driver.initializeChromeDriver()
         self.configurations = configurations
 
     def run_test(self):
-        print("Put run test logics here")
+        for config in self.configurations:
+            self.driver.get(config.url)
