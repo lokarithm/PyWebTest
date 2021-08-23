@@ -7,6 +7,12 @@ A Python 3.x tool that can be used for website testing.
 
 ## Setup
 - ### Install python 3.x
+    - #### For Linux or Mac
+    ```
+    sudo apt install python3
+    ```
+    - #### For Windows:
+        - Download and install from the official Python website: <a href="https://www.python.org" target="_blank">python.org</a>
 
 - ### Install all the packages:
     ```
