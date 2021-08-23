@@ -12,12 +12,17 @@ A Python 3.x tool that can be used for website testing.
     sudo apt install python3
     ```
     - #### For Windows:
-        - Download and install from the official Python website: <a href="https://www.python.org" target="_blank">python.org</a>
+        - Download and install python 3.x from the official Python website: <a href="https://www.python.org" target="_blank">python.org</a>
 
 - ### Install all the packages:
-    ```
-    pip3 install -r requirements.txt
-    ```
+    - 
+        ```
+        pip3 install -r requirements.txt
+        ```
+    - If the packages are not up-to-date, especially the chromedriver, run the following:
+        ```
+        pip install --upgrade -r requirements.txt
+        ```
 - ### Additional step for Windows:
     - Download <a href="https://chromedriver.chromium.org/home" target="_blank">chromedriver</a>
     - Add an environment variable ``Path`` with the directory of the chromedriver executable.
