@@ -16,6 +16,7 @@ class ConfigurationManager:
                 configurations = []
 
                 for item in json_array:
+                    is_headless = item['is_headless']
                     url = item['url']
                     user = User(item['user']['username'],
                                 item['user']['password'])
@@ -24,6 +25,7 @@ class ConfigurationManager:
                     configuration = Configuration(url)
                     configuration.user = user
                     configuration.testCase = testCase
+                    configuration.is_headless = is_headless
 
                     configurations.append(configuration)
                 return configurations

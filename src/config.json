@@ -1,4 +1,5 @@
 [{
+    "is_headless": false,
     "url": "https://myWebsite.com",
     "user": {
         "username": "myUser",

@@ -4,15 +4,14 @@ from selenium.webdriver.chrome.options import Options
 
 
 class Driver:
-    def __init__(self, is_headless=False, window_size='1920x1480'):
-        self.is_headless = is_headless
+    def __init__(self, window_size='1920x1480'):
         self.window_size = window_size
 
-    def initializeChromeDriver(self):
-        chrome_options = self.setupChromeBrowserOptions()
+    def initializeChromeDriver(self, is_headless=False):
+        chrome_options = self.setupChromeBrowserOptions(is_headless)
         return webdriver.Chrome(chrome_options=chrome_options)
 
-    def setupChromeBrowserOptions(self):
+    def setupChromeBrowserOptions(self, is_headless):
         chrome_options = webdriver.ChromeOptions()
 
         ua = UserAgent()
@@ -34,7 +33,7 @@ class Driver:
         chrome_options.add_argument('window-size='+self.window_size)
         chrome_options.add_experimental_option("detach", True)
 
-        if self.is_headless:
+        if is_headless:
             chrome_options.add_argument('--headless')
 
         return chrome_options
